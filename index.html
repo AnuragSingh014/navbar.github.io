@@ -8,13 +8,16 @@
     <title>Document</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
     * {
         margin: 0;
         padding: 0;
+        font-family: 'Satisfy', cursive;
     }
     nav ul li {
         list-style: none;
-        padding: 0.2vh 1.2vw;
+        padding: 0.9vh 1.2vw 0 1.2vw;
         /* margin: 0 10px; */
     }
 
@@ -22,8 +25,8 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: end;
-        border: 2px solid red;
-        height: 5vh;
+        /* border: 2px solid red; */
+        height: 8vh;
         padding-right: 2vw;
     }
 
@@ -36,54 +39,76 @@
         display: flex;
         flex-wrap:wrap-reverse;
         /* justify-content: space-between; */
-        margin: 0vh 0 2vh 0;
-        
+        margin: 0vh 0 2vh 0;        
     }
 
     .box1 {
         color: #294f48;
-        width: 50%;
+        width: 70%;
         background-color: white;
-        height: 60vh;
+        height: 80vh;
         border: 2px solid purple;
         box-sizing: border-box;
+        padding: 0.7em;
 
     }
 
     .box2 {
+        display: flex;
+        align-content: center;
+        justify-self: center;
         background-image: url(Capture.JPG);
         background-repeat: no-repeat;
         background-size: contain;
         color: #294f48;
-        width: 50%;
-        height: 60vh;
+        width: 30%;
+        height: 80vh;
         border: 2px solid purple;
         box-sizing: border-box;
     }
 
-    .box {
-        
-        border:solid#294f48;
-        border-width: 8vh 7vw;
+    .box {    
+        border:solid #294f48;
+        border-width: 8vh 7vw 0vw 7vw;
+        border-bottom: none;
     }
     .container2{
         display: flex;
     }
 
     
-.box3{
-    border: 2px solid red;
-}
-.box4{
-    border: 2px solid red;
-}
+    .box3{
+        border: 2px solid red;
+    }
+    .box4{
+        border: 2px solid red;
+    }
+    .logo{
+        width: 5px;
+        height: 5px;    
+    }
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    .button{
+        background-color: #294f48; /* Green */
+        border: none;
+        color: white;
+        /* padding: 15px 32px; */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 1.5px;
+        /* font-size: 16px; */
+    }
 </style>
 <div class="box">
     <div>
         <header>
             <nav>
                 <ul>
-                    <li><button id="button">donate</button></li>
+                    <li><button class="button">donate</button></li>
                     <li>contact</li>
                     <li>initiatives</li>
                     <li>about us</li>
@@ -93,16 +118,12 @@
     </div>
     <div class="container">
         <div class="box1">
-            box 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde iusto facilis, ipsa accusantium
+            <b style="font-size: 1.5em;">  Fast Forward India (FFI)</b> is a unique effort and an initiative undertaken by the students of IIT(ISM) Dhanbad. This is an organization completely managed and administered by young and enthusiastic students of the institution. Creative and powerful ways are implemented to tackle problems of the millions of underprivileged people in India. The organization conducts blood donation camps, imparts basic computer and English education, and numerous careers counseling sessions in schools to help the deprived students shape their future.
+            <!-- box 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde iusto facilis, ipsa accusantium
             explicabo quia rem. Dolores porro quis omnis maiores vero nam facere, soluta deserunt voluptatibus quos
-            impedit qui similique dignissimos cupiditate.</div><div class="box2">
+            impedit qui similique dignissimos cupiditate.--></div><div class="box2">
             lorem10;
         </div>
     </div>
-    <div class="container2">
-        <div class="box3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, debitis!</div>
-        <div class="box4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, suscipit!</div>
-    </div>
     </body>
-
 </html>
