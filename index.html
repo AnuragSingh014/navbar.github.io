@@ -15,6 +15,9 @@
         padding: 0;
         font-family: 'Satisfy', cursive;
     }
+
+
+
     nav ul li {
         list-style: none;
         padding: 0.9vh 1.2vw 0 1.2vw;
@@ -26,10 +29,8 @@
         flex-direction: row-reverse;
         align-items: end;
         /* border: 2px solid red; */
-        height: 12vh;
+        height: 8vh;
         padding-right: 2vw;
-        padding-top: 2vw;
-        justify-content: end;
     }
 
     header {
@@ -37,64 +38,9 @@
         color: #294f48
     }
 
-    .container {
-        display: flex;
-        flex-wrap:wrap-reverse;
-        /* justify-content: space-between; */
-        margin: 0vh 0 2vh 0;        
-    }
-
-    .box1 {
-        color: #294f48;
-        width: 70%;
-        background-color: white;
-        height: 80vh;
-        /* border: 2px solid purple; */
-        box-sizing: border-box;
-        padding: 0.7em;
-
-    }
-
-    .box2 {
-        display: flex;
-        align-content: center;
-        justify-self: center;
-        background-image: url(Capture.JPG);
-        background-repeat: no-repeat;
-        background-size: contain;
-        color: #294f48;
-        width: 30%;
-        height: 80vh;
-        /* border: 2px solid purple; */
-        box-sizing: border-box;
-    }
-
-    .box {    
-        border:solid #294f48;
-        border-width: 5vh 7vw 0vw 7vw;
-        border-bottom: none;
-    }
-    .container2{
-        display: flex;
-    }
-
-    
-    .box3{
-        border: 2px solid red;
-    }
-    .box4{
-        border: 2px solid red;
-    }
-    .logo{
-        width: 5px;
-        height: 5px;    
-    }
-    img{
-        width: 50px;
-        height: 50px;
-    }
-    .button{
-        background-color: #294f48; /* Green */
+    .button {
+        background-color: #294f48;
+        /* Green */
         border: none;
         color: white;
         /* padding: 15px 32px; */
@@ -103,6 +49,101 @@
         display: inline-block;
         border-radius: 1.5px;
         /* font-size: 16px; */
+    }
+
+    .box {
+        border: solid #294f48;
+        border-width: 5vh 7vw 0vw 7vw;
+        border-bottom: none;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        /* justify-content: space-between; */
+        margin: 0vh 0 2vh 0;
+
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #294f48;
+        width: 50%;
+        background-color: white;
+        height: 80vh;
+        /* border: 2px solid purple; */
+        box-sizing: border-box;
+        padding: 0.7em;
+
+    }
+    .slogan {
+            padding-right: 0.5vw;
+        }
+
+
+
+    /* .image {
+        display: flex;
+        align-content: center;
+        justify-self: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        color: #294f48;
+        width: 40%; 
+        border: 2px solid purple;
+        box-sizing: borde-box;
+    } */
+    .image {
+        display: flex;
+        /* border: 2px solid red; */
+        align-items: center;
+    }
+
+    .inside {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80%;
+        height: 60vh;
+        width: 40vw;
+
+    }
+
+
+    @media (max-width: 770px) {
+        .container {
+            flex-direction: column-reverse;
+            /* border: 5px solid red; */
+        }
+
+        .inside {
+            width: 100%;
+        }
+
+        .text {
+            justify-content: center;
+            /* border: 2px solid red; */
+            width: 100%;
+            padding: 20px;
+        }
+
+        .big {
+            display: flex;
+            justify-content: center;
+        }
+
+        .slogan {
+            padding-right: 0.5vw;
+        }
+
+        .apart-from-slogan {
+            padding-top: 20px;
+        }
     }
 </style>
 <div class="box">
@@ -119,13 +160,26 @@
         </header>
     </div>
     <div class="container">
-        <div class="box1">
-            <b style="font-size: 1.5em;">  Fast Forward India (FFI)</b> is a unique effort and an initiative undertaken by the students of IIT(ISM) Dhanbad. This is an organization completely managed and administered by young and enthusiastic students of the institution. Creative and powerful ways are implemented to tackle problems of the millions of underprivileged people in India. The organization conducts blood donation camps, imparts basic computer and English education, and numerous careers counseling sessions in schools to help the deprived students shape their future.<hr>
-            <!-- box 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi unde iusto facilis, ipsa accusantium
-            explicabo quia rem. Dolores porro quis omnis maiores vero nam facere, soluta deserunt voluptatibus quos
-            impedit qui similique dignissimos cupiditate.--></div><div class="box2">
-            lorem10;
+        <div class="text">
+            <div class="slogan">
+                <h2> Fast Forward India (FFI)</h2>
+            </div>
+            <div class="apart-from-slogan">is a unique effort and an initiative undertaken
+                by the students of IIT(ISM) Dhanbad. This is an organization completely managed and administered by
+                young
+                and enthusiastic students of the institution. Creative and powerful ways are implemented to tackle
+                problems
+                of the millions of underprivileged people in India. The organization conducts blood donation camps,
+                imparts
+                basic computer and English education, and numerous careers counseling sessions in schools to help the
+                deprived students shape their future.
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="Capture.JPG" class="inside">
         </div>
     </div>
     </body>
+
 </html>
