@@ -5,256 +5,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>nav and hero section</title>
+    <script src="./js.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2 {
+            width: 0ch;
+            overflow: hidden;
+            /* to make all content outside h1 hidden*/
+            white-space: nowrap;
+            animation: text 5s steps(22) infinite alternate;
+            border-right: 0.1em solid white;
+
+
+        }
+
+        @keyframes text {
+            0% {
+                width: 0ch;
+            }
+
+            50% {
+                width: 22ch;
+            }
+        }
+
+        /* dropdown*/
+        .dropdown {
+            float: left;
+            overflow: hidden;
+
+        }
+
+        .dropdown p {
+            color: white;
+            padding: 0.25em 0;
+            font-weight: 500;
+            font-size: 20px;
+            text-transform: capitalize;
+            position: relative;
+        }
+
+        .dropdown-content li a {
+            font-size: 0.7rem;
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            background-color: #74c69d;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        nav div::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--cl--1--);
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -ms-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+        }
+
+        nav div:hover::after {
+            width: 45%;
+        }
+    </style>
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Satisfy', cursive;
-    }
-    /* dropdown button begins here*/
-    /* Style The Dropdown Button */
-.changed-button{
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #294f48;
-    font-family: 'Satisfy', cursive;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1; */
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #294f48;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .changed-button {
-  background-color: rgb(41, 79, 72, 0.1);
-  
-}
-/*dropdown button ends here*/
-
-
-    nav ul li {
-        list-style: none;
-        padding: 0.9vh 1.2vw 0 1.2vw;
-        /* margin: 0 10px; */
-    }
-
-    ul {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: end;
-        /* border: 2px solid red; */
-        height: 8vh;
-        padding-right: 2vw;
-    }
-
-    header {
-        background-color: white;
-        color: #294f48
-    }
-
-    .button {
-        background-color: #294f48;
-        /* Green */
-        border: none;
-        color: white;
-        /* padding: 15px 32px; */
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        border-radius: 1.5px;
-        /* font-size: 16px; */
-    }
-
-    .box {
-        border: solid #294f48;
-        border-width: 5vh 7vw 0vw 7vw;
-        border-bottom: none;
-    }
-
-
-    .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap-reverse;
-        /* justify-content: space-between; */
-        margin: 0vh 0 2vh 0;
-
-    }
-
-    .text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #294f48;
-        width: 50%;
-        background-color: white;
-        height: 80vh;
-        /* border: 2px solid purple; */
-        box-sizing: border-box;
-        padding: 0.7em;
-
-    }
-    .slogan {
-            padding-right: 0.5vw;
-        }
-
-
-
-    /* .image {
-        display: flex;
-        align-content: center;
-        justify-self: center;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        color: #294f48;
-        width: 40%; 
-        border: 2px solid purple;
-        box-sizing: borde-box;
-    } */
-    .image {
-        display: flex;
-        /* border: 2px solid red; */
-        align-items: center;
-    }
-
-    .inside {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 80%;
-        height: 60vh;
-        width: 40vw;
-
-    }
-
-
-    @media (max-width: 770px) {
-        .container {
-            flex-direction: column-reverse;
-            /* border: 5px solid red; */
-            font-size: 14px;
-        }
-
-        .inside {
-            width: 100%;
-            height: auto;
-        }
-
-        .text {
-            justify-content: center;
-            align-items: flex-start;
-            /* border: 2px solid red; */
-            width: 100%;
-            padding: 20px;
-        }
-
-        .big {
-            display: flex;
-            justify-content: center;
-        }
-
-        .slogan {
-            padding-right: 0.5vw;
-            display: flex;
-            height: 70vw;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .apart-from-slogan {
-            padding-top: 20px;
-        }
-    }
-</style>
-<div class="box">
-    <div>
-        <header>
-            <nav>
-                <ul>
-                    <li><div class="dropdown">
-                        <button class="changed-button">donate</button>
-                    </div></li>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="header row container">
+            <a href="#" class="logo"><img src="./imgs/logo.jpg" alt=""></a>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
+            <nav class="navigation row">
+                <ul class="row">
+                    <li><a href="#">About us</a></li>
                     <li>
                         <div class="dropdown">
-                            <button class="changed-button">contact</button>
+                            <p class="dropbtn">initiatives</p>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Bloodline</a></li>
+                                <li><a href="#">Disha</a></li>
+                                <li><a href="#">Escape</a></li>
+                                <li><a href="#">Jagriti</a></li>
+                            </ul>
                         </div>
+                        <!-- <a href="#service">initiatives</a> -->
                     </li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="changed-button">Initiatives</button>
-                            <div class="dropdown-content">
-                              <a href="#">Link 1</a>
-                              <a href="#">Link 2</a>
-                              <a href="#">Link 3</a>
-                            </div>
-                          </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="changed-button">about us</button>
-                        </div>
-                    </li>
+                    <li><a href="#service">contact</a></li>
+                    <li><a href="#contact">donate</a></li>
                 </ul>
             </nav>
-        </header>
-    </div>
-    <div class="container">
-        <div class="text">
-            <div class="slogan">
+        </div>
+    </header>
+    <!-- End Navigation -->
+
+    <!-- Hero Section -->
+    <section class="hero-bg">
+        <div class="hero row flex container">
+            <div class="hero-content">
                 <div>
-                <h2> Fast Forward India (FFI)</h2>
+                    <h2>Learn. Donate. Change. Life.</h2>
+                    <p>Fast Forward India (FFI) is a unique effort and an initiative undertaken by the students of
+                        IIT(ISM) Dhanbad.</p>
+                    <a href="#" class="page-btn">donate</a>
                 </div>
             </div>
-            <div class="apart-from-slogan">is a unique effort and an initiative undertaken
-                by the students of IIT(ISM) Dhanbad. This is an organization completely managed and administered by
-                young
-                and enthusiastic students of the institution. Creative and powerful ways are implemented to tackle
-                problems
-                of the millions of underprivileged people in India. The organization conducts blood donation camps,
-                imparts
-                basic computer and English education, and numerous careers counseling sessions in schools to help the
-                deprived students shape their future.
-            </div>
+            <div class="img row"><img src="./imgs/bg2.jpeg" alt=""></div>
         </div>
+    </section>
+    <!-- End Hero Section -->
 
-        <div class="image">
-            <img src="Capture.JPG" class="inside">
-        </div>
-    </div>
-    </body>
+
+    <!-- End Footer -->
+</body>
 
 </html>
