@@ -330,10 +330,13 @@ h3 {
     }
 
     .toggleMenu.active {
+        display: flex;
         position: fixed;
         right: 5%;
         background-image: url(./imgs/close.svg);
         background-size: 25px;
+        align-items: center;
+        justify-content: center;
     }
 
     nav {
