@@ -354,7 +354,10 @@ h3 {
     }
 
     nav.active {
-        align-self: center;
+        display: flex;
+        width: 100vh;
+        align-items: center;
+        justify-content: center;
         position:absolute;
         /* min-height: 100%; */
         height: 100vh;
