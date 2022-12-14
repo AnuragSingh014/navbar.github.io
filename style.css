@@ -166,6 +166,7 @@ nav a:hover::after {
 }
 
 nav div p :hover {
+    cursor: pointer;
     content: "";
     position: absolute;
     left: 0;
