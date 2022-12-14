@@ -128,6 +128,7 @@ nav a:hover::after {
 }
 
 .dropdown p {
+    cursor: pointer;
     color: white;
     padding: 0.25em 0;
     font-weight: 500;
@@ -164,7 +165,7 @@ nav a:hover::after {
     display: block;
 }
 
-nav div::after {
+nav div p :hover {
     content: "";
     position: absolute;
     left: 0;
@@ -179,7 +180,7 @@ nav div::after {
     -o-transition: 0.5s ease-in-out;
 }
 
-nav div:hover::after {
+;nav div p:hover::after {
     width: 45%;
 }
 
@@ -353,7 +354,7 @@ h3 {
 
     nav.active {
         align-self: center;
-        position: fixed;
+        position:absolute;
         /* min-height: 100%; */
         height: 100vh;
         width: 100vw;
