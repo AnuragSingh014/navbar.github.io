@@ -24,7 +24,7 @@ section h2 {
 body {
     --cl--1--: #ffffff;
     --cl--2--: #212529;
-    --cl--3--: #3556FB;
+    --cl--3--: #c1c8e4;
     --shadow--1--: 2.5px -2.5px 15px 2.5px rgba(33, 37, 41, 0.25);
     --shadow--2--: -2.5px 2.5px 2.5px 2.5px rgba(33, 37, 41, 0.25);
     --gap--: clamp(2rem, 5vw, 5rem);
@@ -145,7 +145,7 @@ nav a:hover::after {
     text-decoration: none;
     display: block;
     text-align: left;
-    background-color: #3556FB;
+    background-color: #5ab9ea;
 }
 
 .dropdown-content {
@@ -191,6 +191,10 @@ nav div p :hover {
 
 
 /* Hero Section */
+
+section h2{
+    color: #5680e9;
+}
 .hero-bg {
     background: var(--cl--3--);
 }
@@ -218,10 +222,11 @@ h5 {
 }
 
 h2 {
+    color: #5680e9;
     font-weight: 700;
     font-size: clamp(40px, 5vw, 70px);
     line-height: clamp(45px, 5vw, 75px);
-    color: var(--cl--1--);
+    /* color: var(--cl--1--); */
 }
 
 p {
